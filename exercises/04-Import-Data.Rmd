@@ -91,7 +91,7 @@ If you run the code above and examine the results, you may now notice a new conc
 
 When you use `read_csv()`, `read_csv()` tries to match each column of input to one of the basic data types in R. `read_csv(0` generally does a good job, but here the initial presence of the character strings `.` caused `read_csv()` to misidentify the contents of the `ozone` column. You can now correct this with R's `as.numeric()` function, or you can read the data in again, this time instructing `read_csv()` to parse the column as numbers.
 
-To do this, add the argument `col_types` to `read.csv()` and set it equal to a list. Add a named element to the list for each column you would like to manually parse. The name of the element should match the name of the column you wish to parse. So for example, if we wish to parse the `ozone` column into a specifc data type, we would begin by inserting the argument:
+To do this, add the argument `col_types` to `read_csv()` and set it equal to a list. Add a named element to the list for each column you would like to manually parse. The name of the element should match the name of the column you wish to parse. So for example, if we wish to parse the `ozone` column into a specifc data type, we would begin by inserting the argument:
 
 ```{r eval = FALSE}
 nimbus <- read_csv("nimbus.csv", na = ".",
